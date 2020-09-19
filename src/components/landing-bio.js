@@ -39,6 +39,7 @@ const LandingBio = () => (
           siteMetadata {
             title
             subtitle
+            construction
           }
         }
       }
