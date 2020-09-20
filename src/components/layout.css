@@ -8,6 +8,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body.dark-mode {
+  background-color: #1a1919;
+  color: #999;
+}
+
 article,
 aside,
 details,
@@ -626,8 +631,11 @@ a::selection {
   padding-left: 2.8em;
   overflow: initial;
 }
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
   }
 }
+
+

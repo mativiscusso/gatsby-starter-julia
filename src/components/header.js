@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
 import React from "react"
+import ToggleTheme from "./ToggleTheme"
 
 const Content = styled.div`
   max-width: 860px;
@@ -72,11 +73,12 @@ const SiteHeader = styled.header`
   justify-content: center;
 `
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <SiteHeader>
     <Content>
+        <ToggleTheme/>
       <p>
-        <HomeLink to="/">{siteTitle}</HomeLink>
+        <HomeLink to="/">Home</HomeLink>
         <NavLink to="/blog">Blog</NavLink>
         <GitHubLink href="https://github.com/mativiscusso">
           GitHub
