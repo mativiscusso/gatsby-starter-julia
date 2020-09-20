@@ -8,13 +8,14 @@ const Content = styled.div`
   max-width: 860px;
   padding: 1rem 1.0875rem;
   font-size: 1.2rem;
+  display: flex;
 `
 
 const NavLink = styled(Link)`
   color: black;
   margin-left: 15px;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   position: relative;
 
   ::after {
@@ -76,14 +77,12 @@ const SiteHeader = styled.header`
 const Header = () => (
   <SiteHeader>
     <Content>
-        <ToggleTheme/>
-      <p>
         <HomeLink to="/">Home</HomeLink>
         <NavLink to="/blog">Blog</NavLink>
         <GitHubLink href="https://github.com/mativiscusso">
           GitHub
         </GitHubLink>
-      </p>
+        <ToggleTheme/>
     </Content>
   </SiteHeader>
 )

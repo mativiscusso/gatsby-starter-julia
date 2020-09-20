@@ -1,19 +1,31 @@
 import React from 'react';
 import useDarkMode from 'use-dark-mode';
-
-import Toggle from './Toggle.js';
+import './Toggle.scss'
 
 const DarkModeToggle = () => {
   const darkMode = useDarkMode(false);
 
   return (
     <div className="dark-mode-toggle">
-      <button className="toggle-theme-btn" type="button" onClick={darkMode.disable}>
-        ☀
+      <button className="sun-theme-btn" type="button" onClick={darkMode.disable}>
+      <span
+        className="emoji"
+        role="img"
+        aria-label="moon"
+        aria-hidden="true"
+    >
+        🌔
+    </span>
       </button>
-      <Toggle checked={darkMode.value} onChange={darkMode.toggle} />
-      <button className="toggle-theme-btn" type="button" onClick={darkMode.enable}>
-        ☾
+      <button className="moon-theme-btn" type="button" onClick={darkMode.enable}>
+      <span
+        className="emoji"
+        role="img"
+        aria-label="moon"
+        aria-hidden="true"
+    >
+        🌘
+    </span>
       </button>
     </div>
   );
